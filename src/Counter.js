@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Counter.css'
+// UseState = Modifica os estados dos elementos
 
 const Counter = () => {
     const [contador, setContador] = useState(0)
