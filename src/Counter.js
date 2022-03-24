@@ -1,9 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Counter.css'
 // UseState = Modifica os estados dos elementos
 
 const Counter = () => {
     const [contador, setContador] = useState(0)
+    const [teste, setTeste] = useState('teste')
+    
+
+    useEffect(() => {
+        console.log('ok alterou o estado de teste ')
+    }, [teste])
 
     const handleOnClick = operator => {
         const novoValor = operator === '+'
@@ -24,6 +30,7 @@ const Counter = () => {
             <span>{contador}</span>
             <button onClick={ () => handleOnClick('-')}>-</button>
             <button onClick={ () => handleOnClick('+')}>+</button>
+            <button onClick={ () => setTeste('Outro Valor')}>{teste}</button>
         </div>
      )
 }
