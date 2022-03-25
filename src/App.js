@@ -15,6 +15,10 @@ const pages = {
     text: 'Contador',
     component: Counter,
   },
+  users: {
+    text: 'Usuarios',
+    component: Users,
+  },
 }
 
 

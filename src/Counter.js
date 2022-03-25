@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import './Counter.css'
+import Template from './Template'
+
+
 // UseState = Modifica os estados dos elementos
 
 const Counter = () => {
@@ -26,13 +29,16 @@ const Counter = () => {
 
 
     return (
+        <Template title="Contador">
         <div className='counter'>
             <span>{contador}</span>
             <button onClick={ () => handleOnClick('-')}>-</button>
             <button onClick={ () => handleOnClick('+')}>+</button>
             <button onClick={ () => setTeste('Outro Valor')}>{teste}</button>
         </div>
+        </Template>
      )
+     
 }
 
 export default Counter
